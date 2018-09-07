@@ -1,0 +1,82 @@
+/* modules/share-prompt/share-prompt.wxss */
+.share-prompt{
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.share_box{
+  width: 620rpx;
+  height: 683rpx;
+  position: relative
+}
+.share_bg{
+  width: 620rpx;
+  height: 683rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.share_tit{
+  margin-top: 200rpx;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 70rpx;
+}
+.share_con{
+  width: 418rpx;
+  font-size: 26rpx;
+  color: #666;
+  line-height: 46rpx;
+  margin: 0 auto;
+}
+.show_balance{
+  width: 296rpx;
+  height: 84rpx;
+  background: #5dc9fa;
+  border-radius: 8rpx;
+  margin: 18rpx auto;
+  font-size: 24rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+
+}
+.show_balance image{
+  width: 55rpx;
+  height: 55rpx;
+  margin-left: 16rpx;
+  margin-right: 18rpx;
+}
+.share_box .btn_box{
+  display: flex;
+  width: 500rpx;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.invite_btn,.private_btn{
+  width: 240rpx;
+  height: 84rpx;
+  border-radius: 37rpx;
+  font-size: 28rpx;
+  color: #fff;
+  border: 0;
+  line-height: 84rpx;
+  margin: 0;
+}
+.invite_btn{
+  background: #ffb320;
+  box-shadow:0 5rpx 0 #f39442;
+
+}
+.private_btn{
+  background: #971cf0;
+  box-shadow:0 5rpx 0 #8010d2;
+}

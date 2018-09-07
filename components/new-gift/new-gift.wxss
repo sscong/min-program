@@ -1,0 +1,70 @@
+/* components/new-gift/new-gift.wxss */
+.new_gift_layer{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 99999;
+
+}
+.container_box{
+  width: 600rpx;
+  height: 620rpx;
+  margin: 365rpx auto;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.container_box .new_gift_bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.container_box .delete_btn{
+  position: absolute;
+  top: 24rpx;
+  right: 25rpx;
+  width: 30rpx;
+  height: 30rpx;
+  
+}
+.gift_list{
+  margin-top: 310rpx;
+  margin-left: 110rpx;
+  font-size: 28rpx;
+  color: #666;
+  overflow: hidden;
+}
+.gift_list .gift_item{
+  display: block;
+  float: left;
+  line-height: 47rpx;
+  
+}
+.gift_list .gift_item:not(:last-child){
+  width: 185rpx;
+}
+.gift_list .gift_item::before{
+  content: '▪';
+  margin-right: 15rpx;
+}
+.gift_tip{
+  font-size: 20rpx;
+  color: #fe2828;
+  line-height: 82rpx;
+}
+.post_btn{
+  width: 480rpx;
+  height: 85rpx;
+  background: #ffb321;
+  font-size: 26rpx;
+  color: #442302;
+  border-radius: 85rpx;
+  line-height: 85rpx;
+  box-shadow: 0 5rpx 0 #f39442;
+}

@@ -1,0 +1,56 @@
+/* pages/withdraw/withdraw.wxss */
+.withdraw_box{
+  font-size: 26rpx;
+  color: #fff;
+  height: 100%;
+  /* margin-top: 126rpx; */
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.contain_box{
+  width: 500rpx;
+  height: 230rpx;
+  border-radius: 15rpx;
+  background: rgba(200, 200, 200, 0.3);
+  margin: 288rpx auto 0;
+  padding: 70rpx 40rpx 0;
+  line-height: 52rpx;
+
+
+  
+}
+.account_money text{
+  color: #ff623b;
+
+}
+.contain_box .withdraw{
+  margin-top: 50rpx;
+}
+.contain_box .withdraw text{
+  float: left;
+}
+.contain_box input{
+  border-bottom: 1px dashed #a0a0a0;
+  width: 322rpx;
+  float: left;
+  color: #ff623b;
+  font-size: 28rpx;
+}
+.tip_text{
+  font-size: 20rpx;
+  margin-top: 25rpx;
+  margin-left: 125rpx;
+}
+.post_btn{
+  width: 438rpx;
+  height: 72rpx;
+  border-radius: 34rpx;
+  background: #ffb320;
+  box-shadow: 0 5px 0 #f39442;
+  font-size: 26rpx;
+  margin-top: 145rpx;
+  color: #463102;
+}

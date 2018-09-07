@@ -1,0 +1,61 @@
+/* pages/authorize/authorize.wxss */
+.authorize{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+.bg_img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.auth_icon{
+  width: 308rpx;
+  height: 234rpx;
+  margin-top: 360rpx;
+}
+.auth_word{
+  width: 100%;
+  margin: 45rpx 0 140rpx;
+}
+.auth_word text{
+  display: block;
+  text-align: center;
+  font-size: 28rpx;
+  color: #ffffff;
+  line-height:52rpx; 
+}
+.auth_btn{
+  width:440rpx;
+  height:72rpx;
+  margin-top: 40rpx;
+  border-radius:35rpx;
+  background:#09bb07;
+  box-shadow:0 5px 0 #018000;
+  color: #ffffff;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 72rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

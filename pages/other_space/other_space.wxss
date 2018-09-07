@@ -1,0 +1,176 @@
+/* pages/other_space/other_space.wxss */
+.other_space{
+  width: 100%;
+  
+  font-size: 26rpx;
+  color: #fff;
+  overflow: hidden;
+}
+.user_info_box{
+  margin: 116rpx auto 0;
+  width: 635rpx;
+  height: 245rpx;
+}
+.user_left{
+  float: left;
+  width: 284rpx;
+}
+.user_left .user_img{
+  width: 104rpx;
+  height: 104rpx;
+  border-radius: 50%;
+  margin-left: 15rpx;
+}
+.user_left .user_name{
+  display: block;
+  line-height: 66rpx;
+}
+.user_left .user_id{
+  font-size: 16rpx;
+  color: #5ecdbc;
+}
+.user_right{
+  float: left;
+  margin-top: 40rpx; 
+}
+.follow_num{
+  font-size: 22rpx;
+  margin-bottom: 18rpx;
+}
+.follow_num .num{
+  color: #e95a3a;
+  font-size: 24rpx;
+}
+.follow_num .follow_me{
+  margin-left: 105rpx; 
+}
+.vip_box{
+  margin-bottom: 22rpx;
+  height: 60rpx;
+}
+.vip_box .vip_icon{
+  width: 50rpx;
+  float: left;
+  margin-right: 17rpx;
+}
+.vip_box .vip_txt{
+  line-height: 52rpx;
+  float: left;
+  color: #ffb320;
+}
+.vip_box .follow_btn{
+  float: right;
+  display: block;
+  width: 110rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+  background: #ffb320;
+  color: #ff0000;
+  text-align: center;
+  line-height: 60rpx;
+  margin-right: -40rpx;
+}
+.vip_box .followed{
+  background: #cacaca;
+  color: #fefefe;
+}
+.tip_box .sex_man{
+  color: #2d79ba;
+  font-weight: 900;
+}
+.tip_box .sex_woman{
+  color: #ed7aa5;
+}
+.tip_box .tip_item{
+  border-radius: 5rpx;
+  padding: 4rpx 14rpx;
+  color: #fff;
+  margin-left: 20rpx;
+}
+.tip_box .area{
+  background: #f47f8f;
+  margin-left: 35rpx;
+}
+.tip_box .age{
+  background: #eab484;
+}
+.tip_box .constellation{
+  background: #5ecdbc;
+}
+.nav_box{
+  width: 720rpx;
+  height: 98rpx;
+  margin: 0 auto;
+  border-top: 1px solid #595959;
+  border-bottom: 1px solid #595959;
+  display: flex;
+  align-items: center;
+}
+.nav_box text{
+  height: 72rpx;
+  width: 50%;
+  display: block;
+  float: left;
+  text-align: center;
+  line-height: 72rpx;
+
+}
+.nav_box .red{
+  color: #e91c2d;
+}
+.nav_box .default{
+  color: #fff;
+}
+.nav_box text:first-child{
+  border-right: 1px solid #595959;
+  box-sizing: border-box;
+}
+.opus_box{
+  text-align: center;
+}
+.has_opus{
+  width: 630rpx;
+  margin: 52rpx auto;
+}
+.has_opus .opus_item{
+  float: left;
+}
+.has_opus .opus_img{
+  width: 292rpx;
+  height: 266rpx;
+  border-radius: 4rpx;
+  
+  margin-bottom: 37rpx;
+}
+.has_opus .opus_item:nth-child(odd){
+  margin-right: 42rpx;
+}
+.no_opus{
+  margin-top: 260rpx;
+}
+.has_gift{
+  width: 648rpx;
+  margin: 70rpx auto;
+  overflow: hidden;
+}
+.gift_item{
+  width: 190rpx;
+  height: 190rpx;
+  border: 1px solid #595959;
+  border-radius: 14rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 46rpx;
+  float: left;
+}
+.gift_item:not(:nth-child(3n)){
+  margin-right: 32rpx;
+}
+.gift_item .gift_img{
+  width: 120rpx;
+}
+.no_gift{
+  text-align: center;
+  margin-top: 260rpx;
+}

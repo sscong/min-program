@@ -1,0 +1,44 @@
+<!--components/sign-in/sign-in.wxml-->
+<view class="sign_in" hidden='{{!isShow}}'>
+  <image class="sign_bg" src="/images/sign_bg.png"></image>
+  <view class="sign_box">
+    <text class="sign_tit">会员签到五倍私信数量（每周清零）</text>
+    <view class="package_box">
+      <block wx:for="{{signList}}" wx:key="{{index}}">
+        <view class="pack_item">
+          <image class="pack_img_ing" src="{{signDay<index?item.icon:signedImg}}"></image>
+          <text>{{item.day}}</text>
+        </view>
+      </block>
+      
+    </view>
+    <view class="sign_gift">
+      <text>第一天：私信10条</text>
+      <text>鲜花3朵</text>
+    </view>
+    <button class="sign_btn" bindtap='signIn'>签到</button>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

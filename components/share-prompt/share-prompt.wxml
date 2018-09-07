@@ -1,0 +1,16 @@
+<!--modules/share-prompt/share-prompt.wxml-->
+<view class='share-prompt' hidden='{{!isShow}}'>
+  <view class='share_box'>
+    <image class='share_bg' src='/images/share_bg.png'></image>
+    <view class='share_tit'>分享得私信</view>
+    <view class='share_con'>私信数量不足，微信群友点击您分享的链接，即可获得10条免费私信额度哦~</view>
+    <view class='show_balance'>
+      <image class='money_icon' src='/images/money_icon.png'></image>
+      <text>账户余额：￥100</text>
+    </view>
+    <view class='btn_box'>
+      <button class='invite_btn' bindtap='inviteDialog'>邀请群友+10条</button>
+      <button class='private_btn' bindtap='letterDialog'>私信套餐￥1</button>
+    </view>
+  </view>
+</view>

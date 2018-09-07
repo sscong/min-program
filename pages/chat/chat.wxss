@@ -1,0 +1,214 @@
+/* pages/chat/chat.wxss */
+.page_bg{
+  width: 100%;
+  padding-top: 145rpx;
+}
+/* .bg_img{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+} */
+.history{
+  width: 100%;
+  font-size: 26rpx;
+  color: #3b3b3b;
+  line-height: 40rpx;
+}
+.my_right,.you_left{
+  padding: 37rpx 30rpx 30rpx;
+}
+.history .send_time{
+  text-align: center;
+  display: block;
+  color: #ffffff;
+  font-size: 14rpx;
+}
+.history .p_r{
+  display: flex;
+}
+.history .new_img{
+  width: 115rpx;
+  height: 115rpx;
+  border-radius: 50%;
+}
+.history .new_txt{
+  width: 414rpx;
+  margin-top: 25rpx;
+}
+.new_txt .new_txt_my{
+  padding: 25rpx 22rpx;
+  background-color: #ffffff;
+  
+}
+.p_r .sanjiao{
+  width: 17rpx;
+  height: 11rpx;
+  margin-top: 25rpx;
+  
+}
+.my_right .p_r{
+  justify-content: flex-end;
+}
+.my_right .new_txt_my{
+  border: 1px solid #e5e8ee;
+  float: right;
+  
+  border-bottom-right-radius: 26rpx;
+  border-bottom-left-radius: 26rpx;
+  border-top-left-radius: 26rpx;
+}
+.my_right .sanjiao{
+  margin-left: -1px;
+  margin-right: 16rpx;
+}
+.you_left .new_txt{
+  position: relative;
+}
+.you_left .new_txt_my{
+  float: left;
+  /* border: 1px solid #e5e8ee; */
+  border-bottom-right-radius: 26rpx;
+  border-bottom-left-radius: 26rpx;
+  border-top-right-radius: 26rpx;
+}
+.you_left .sanjiao{
+  margin-right: -1px;
+  margin-left: 16rpx;
+}
+.gift_img{
+  position: fixed;
+  right: 40rpx;
+  bottom: 215rpx;
+  width: 86rpx;
+  height: 80rpx;
+}
+
+.send_box{
+  width: 100%;
+  height: 118rpx;
+  background-color: #000000;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.send_box .inp_box{
+  width: 480rpx;
+  height: 68rpx;
+  background-color: #ffffff;
+  border-radius: 14rpx;
+  margin-left: 27rpx;
+}
+.send_box .emoji_img{
+  width: 53rpx;
+  height: 53rpx;
+  margin-left: 27rpx;
+  margin-right: 27rpx;
+}
+.send_box .send_btn{
+  width: 110rpx;
+  height: 66rpx;
+  font-size: 28rpx;
+  padding: 0;
+  background-color: #ffb320;
+  color: #463102;
+  margin: 0;
+}
+
+.gift_box{
+  width: 100%;
+  height: 645rpx;
+  border-top: 1px solid #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #000;
+}
+.gift_list{
+  width: 644rpx;
+  
+  margin: 32rpx auto 0;
+  overflow: hidden;
+}
+.gift_list .swiper{
+  height: 520rpx;
+}
+.gift_item{
+  float: left;
+  font-size: 22rpx;
+  color: #ffb320;
+  text-align: center;
+  line-height: 46rpx;
+}
+.gift_item:not(:nth-child(3n)){
+  margin-right: 34rpx;
+}
+.gift_item .img_box{
+  width: 186rpx;
+  height: 186rpx;
+  border: 1px solid #595959;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.gift_item .img_box.selected{
+  border-color: #ffb320;
+}
+.gift_item .img_box.default{
+  border-color: #595959;
+}
+.gift_item .img_box image{
+  width: 118rpx;
+}
+/* .gift_bottom{
+   margin-top: 30rpx;
+} */
+.gift_bottom .has_num{
+  float: left;
+  color: #fff;
+  font-size: 24rpx;
+  margin-left: 50rpx;
+  margin-right: 120rpx;
+  line-height: 58rpx;
+}
+.gift_bottom .pay_btn{
+  width: 153rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  border-radius: 10rpx;
+  background: #ffb321;
+  color: #473102;
+  font-size: 34rpx;
+  float: left;
+}
+.gift_bottom .give_box{
+  float: right;
+  margin-right: 28rpx;
+ 
+}
+.gift_bottom .give_box .give_num{
+  width: 136rpx;
+  height: 55rpx;
+  border: 1px solid #fff;
+  border-radius: 10rpx;
+  color: #fff;
+  float: left;
+  text-align: center;
+
+}
+.gift_bottom .give_box .give_btn{
+  width: 120rpx;
+  height: 61rpx;
+  background: #ff2093;
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 34rpx;
+  line-height: 57rpx;
+  padding: 0;
+  float: left;
+  margin-left: -10rpx;
+}

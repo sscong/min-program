@@ -1,0 +1,54 @@
+<!--pages/my_space/my_space.wxml-->
+<view class='my_space'>
+  <image class='bg_img' src="/images/page_bg.png"></image>
+  <view class='user_info_box'>
+    <view class='user_left'>
+      <image class='user_img' src="{{userInfo.iconUrl}}" bindtap='fenxiang'></image>
+      <text class='user_name'>{{userInfo.nickName}}</text>
+      <text class='user_id'>ID:{{userInfo.id}}</text>
+    </view>
+    <view class='user_right'>
+      <view class='follow_num'>
+        <text class='follow_other'><text class='num'>{{userInfo.followCount?userInfo.followCount:0}}</text>关注</text>
+        <text class='follow_me'><text class='num'>{{userInfo.fansCount?userInfo.fansCount:0}}</text>粉丝</text>
+      </view>
+      <view class='tip_box'>
+        <text class='sex_man' wx:if="{{userInfo.sex==1}}">♂</text>
+        <text class='sex_woman' wx:else>♀</text>
+        <text class='tip_item area'>{{userInfo.area.provinceName}}</text>
+        <text class='tip_item age'>{{userInfo.age}}</text>
+        <text class='tip_item constellation'>{{userInfo.constellation}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='href_list'>
+    <navigator open-type="navigateTo" url='/pages/recharge/recharge' class='item balance'>
+      <view class='xiao_box'>
+        <image class='icon' src="/images/money_icon2.png"></image>
+        <text class='txt'>余额</text>
+        <text class='right balance_num'>{{userInfo.reBalance}}</text>
+      </view>
+    </navigator>
+    <view class='item follow'>
+      <view class='xiao_box'>
+        <image class='icon' src="/images/envelop_icon.png"></image>
+        <text class='txt'>关注信数量</text>
+        <text class='right follow_letter_num'>{{userInfo.followMsgCount}}</text>
+      </view>
+    </view>
+    <navigator open-type="navigateTo" url='/pages/withdraw/withdraw' class='item withdraw'>
+      <view class='xiao_box'>
+        <image class='icon' src="/images/wallet_icon.png"></image>
+        <text class='txt'>收益提现</text>
+        <image class='right back' src="/images/chevron_icon.png"></image>
+      </view>
+    </navigator>
+    <navigator open-type="navigateTo" url='/pages/vip_page/vip_page' class='item vip'>
+      <view class='xiao_box'>
+        <image class='icon' src="/images/vip_icon.png"></image>
+        <text class='txt'>VIP特权</text>
+        <image class='right back' src="/images/chevron_icon.png"></image>
+      </view>
+    </navigator>
+  </view>
+</view>

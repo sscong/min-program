@@ -1,0 +1,20 @@
+<!--pages/recharge/recharge.wxml-->
+<view class='recharge'>
+  <top-title show-back="{{showBack}}" title="余额充值"></top-title>
+  <image class='bg_img' src='/images/page_bg.png'></image>
+  <view class='balance_top'>余额：<text>98</text></view>
+  <view class='recharge_list'>
+    <view class='recharge_num'>充值金额：<text>{{rechargeList[selectedIndex].sum}}</text></view>
+    <view class='recharge_box'>
+      <block wx:for="{{rechargeList}}" wx:key="{{index}}">
+        <view class="recharge_item {{selectedIndex==index?'selected':'default'}}" data-index="{{index}}" bindtap='changeSum'>
+          <view class='con_box'>
+            <text class='sum'>￥{{item.sum}}</text>
+            <text class='supple'>{{item.supple}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <button class='pay_btn' bindtap='wxPay'>微信支付</button>
+</view>

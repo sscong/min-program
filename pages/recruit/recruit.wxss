@@ -1,0 +1,103 @@
+/* pages/recruit/recruit.wxss */
+#video{
+  display: flex;
+  width:596rpx;
+  height:432rpx;
+  margin:30% auto 0;
+}
+.recruit{
+ width: 100%;
+}
+.video_box{
+  display: flex;
+  flex-direction: column;
+  width: 596rpx;
+  height: 432rpx;
+  background-color: rgba(51, 51, 51, .7);
+  margin:30% auto 0;
+  border-radius: 8rpx;
+}
+.video_box text{
+  text-align: center;
+}
+.video_icon{
+  width:138rpx;
+  height: 138rpx;
+  margin:30rpx auto;
+}
+.video_time{
+  color:#ffb320;
+  font-size: 30rpx;
+  line-height: 52rpx;
+}
+.video_num{
+  color: #ffffff;
+  font-size: 26rpx;
+  line-height: 64rpx;
+}
+.video_desc{
+  color: #7e7e7e;
+  font-size: 24rpx;
+  line-height: 46rpx;
+}
+.recruit_form{
+  margin: 90rpx auto 0;
+}
+.recruit_form .recruit_input{
+  width: 100%;
+  display: flex;
+  margin-top: 40rpx;
+}
+.recruit_input text{
+  width: 160rpx;
+  margin-right: 18rpx;
+  text-align: right;
+  color: #ffffff;
+  font-size: 26rpx;
+  line-height: 62rpx;
+}
+.recruit_input .recruit_select{
+  width: 472rpx;
+  text-align: right;
+  color: #333;
+}
+.recruit_input textarea{
+  width: 472rpx;
+  height:110rpx;
+  border:1px #ffffff solid;
+  border-radius: 8rpx;
+  background-color: #333333;
+}
+.recruit_btn{
+  width:440rpx;
+  height:72rpx;
+  margin-top: 180rpx;
+  border-radius:35rpx;
+  background:#ffb320;
+  box-shadow:0 5px 0 #f39442;
+  color: #463102;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 72rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

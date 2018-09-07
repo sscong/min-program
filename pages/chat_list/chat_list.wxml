@@ -1,0 +1,25 @@
+<!--pages/chat_list/chat_list.wxml-->
+<view class='chat_list'>
+  <top-title show-back="{{showBack}}" title="私信"></top-title>
+  
+  <image class='bg_img' src='/images/page_bg.png'></image>
+  <scroll-view class='list-item'>
+    <block wx:for="{{chatList}}" wx:key="{{index}}">
+      <view class='item-detail' data-uid="{{item.sendUserId}}" bindtap='goChat'>
+        <view class='user_box'>
+          <view class='user_img_box'>
+            <image class='user_img' src='{{item.userView.iconUrl}}' mode="aspectFill"></image>
+            <text class='chat_num' wx:if="{{item.unReadCount}}">{{item.unReadCount}}</text>
+          </view>
+          
+          <view class='user_con'>
+            <text>{{item.userView.nickName}}</text>
+            <text>{{item.content}}</text>
+          </view>
+        </view>
+        
+        <text class='item_time'>{{item.sendTime}}</text>
+      </view>
+    </block>
+  </scroll-view>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/withdraw/withdraw.wxml-->
+<view class='withdraw_box'>
+  <top-title show-back="{{showBack}}" title="提现"></top-title>
+  <image class='bg_img' src='/images/page_bg.png'></image>
+  <view class='contain_box'>
+    <view class='account_money'>累计收益：<text>￥2000</text></view>
+    <view class='account_money'>账户余额：<text>￥2000</text></view>
+    <view class='withdraw'>
+      <text>提现金额：</text>
+      <input type='text'/>
+    </view>
+  </view>
+  <text class='tip_text'>提现到微信钱包，每周只能提现两次哦~</text>
+  <button class='post_btn'>确认提现</button>
+</view>

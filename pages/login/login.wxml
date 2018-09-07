@@ -1,0 +1,26 @@
+<!--pages/login/login.wxml-->
+<view class='login_box'>
+  <image class='bg_img' src="/images/page_bg.png"></image>
+  <view class='avatar_box' bindtap='uploadImg'>
+  
+    <image class='avatar_default' src='{{avatarUrl}}' mode="aspectFill"></image>
+    <text>请上传头像</text>
+  </view>
+  
+  <view class='birthday_box'>
+    <text class='label'>生日</text>
+    <picker mode="date" value="{{date}}" end="2017-09-01" bindchange="bindDateChange">
+      <view class='select_box'>
+        <text>{{date}}</text>
+        <view class='jiao'></view>
+      </view>
+    </picker>
+  </view>
+  <button class='post_btn'>提交</button>
+
+  <!-- <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker> -->
+</view>

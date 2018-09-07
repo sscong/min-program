@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "share-prompt": "/components/share-prompt/share-prompt",
+    "top-title": "/components/top-title/top-title"
+  },
+  "navigationBarTitleText": "私信"
+  
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "new-gift": "/components/new-gift/new-gift",
+    "sign-in": "/components/sign-in/sign-in"
+  }
+}

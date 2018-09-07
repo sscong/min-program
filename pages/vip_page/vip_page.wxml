@@ -1,0 +1,25 @@
+<!--pages/vip_page/vip_page.wxml-->
+<view class='vip_page'>
+  <top-title show-back="{{showBack}}" title="VIP特权"></top-title>
+  <image class='bg_img' src='/images/page_bg.png'></image>
+  <view class='vip_contain'>
+    <view class='product_box'>
+      <block wx:for="{{proList}}" wx:key="{{index}}">
+        <view class="product_item {{selectedIndex==index?'selected':'default'}}" data-index="{{index}}" bindtap='changePro'>
+          <view class='month_list'><text>{{item.month}}</text>个月</view>
+          <text class='pro_price'>{{item.price}}元/月</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='privilige_box'>
+    <block wx:for="{{priviligeList}}" wx:key="{{index}}">
+      <view class='privilige_item'>
+        <image class='icon' src="{{item.icon}}"></image>
+        <text class='txt'>{{item.txt}}</text>
+      </view>
+    </block>
+  </view>
+
+  <button class='pay_btn'>购买</button>
+</view>

@@ -1,0 +1,60 @@
+<!--pages/chat/chat.wxml-->
+<view class='page_bg'>
+  <top-title show-back="{{showBack}}" title="{{otherUserView.nickName}}"></top-title>
+  <image class='bg_img' src='/images/page_bg.png'></image>
+  <scroll-view class='history' id="history" scroll-into-view="{{toView}}" scroll-y="true" style="height: {{scrollHeight}}px;" catchtap='changeShowGift'>
+    <block wx:key="{{index}}" wx:for="{{allContentList}}">
+      <view class='my_right' wx:if="{{item.msgType==2}}" id="index{{index}}">
+        <text class='send_time'>{{item.sendTime}}</text>
+        <view class='p_r'>
+          <text class='new_txt'><text class='new_txt_my'>{{item.content}}</text></text>
+          <image class='sanjiao my' src="/images/jiao_you.png"></image>
+          <image class='new_img' src='{{userView.iconUrl}}' mode="aspectFill" data-tip="me" bindtap='goOtherSpace'></image>
+        </view>
+      </view>
+      <view class='you_left' wx:if="{{item.msgType==1}}" id="index{{index}}">
+        <text class='send_time'>{{item.sendTime}}</text>
+        <view class='p_r'>
+          <image class='new_img' src='{{otherUserView.iconUrl}}' mode="aspectFill" data-tip="other" bindtap='goOtherSpace'></image>
+          <image class='sanjiao you' src='/images/jiao_left.png'></image>
+          <text class='new_txt'><text class='new_txt_my'>{{item.content}}</text></text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <image class='gift_img' src='/images/gift.png' catchtap='showGift'></image>
+  <view class='send_box' wx:if="{{!isShowGift}}">
+    <input type="text" class='inp_box' confirm-type="send" bindinput='sendMessage' value="{{sendContent}}"/>
+    <image class='emoji_img' src='/images/emoji_icon.png'></image>
+    <button class='send_btn' bindtap="bindButtonTap">发送</button>
+  </view>
+  <view class='gift_box' wx:else>
+    <view class='gift_list'>
+      <swiper indicator-dots='true' class='swiper' indicator-color="#808080" indicator-active-color="#ffffff">
+        <block wx:for="{{giftList}}" wx:key="{{index}}" wx:for-item="swiper">
+          <swiper-item>
+            <block wx:for="{{swiper}}" wx:key="{{index}}">
+              <view class='gift_item'>
+                <view class="img_box {{selectedGiftId == item.id?'selected':'default'}}" id="{{item.id}}" data-id="{{item.id}}" catchtap='selectedGift'>
+                  <image class='icon' mode="widthFix" src='{{item.giftUrl}}'></image>
+                </view>
+                <text class='price'>{{item.beanCount}}爱豆/个</text>
+              </view>
+            </block>
+          </swiper-item>
+        </block>
+      </swiper>
+      
+    </view>
+
+    <view class='gift_bottom'>
+      <text class='has_num'>已有：{{flowerCount}}个</text>
+      <button class='pay_btn'>充值</button>
+      <view class='give_box'>
+        <view class='give_num'>10<text>></text></view>
+        <button class='give_btn'>赠送</button>
+      </view>
+    </view>
+  </view>
+  <share-prompt id="sharePrompt"/>
+</view>

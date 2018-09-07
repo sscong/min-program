@@ -1,0 +1,33 @@
+<!--pages/recruit/recruit.wxml-->
+<view class="recruit">
+  <image class='bg_img' src='/images/page_bg.png'></image>
+  <view class="video_box" bindtap='chooseVideo' wx:if="{{!isvideoShow}}">
+    <image class="video_icon" src="../../images/video_icon.png"></image>
+    <text class="video_time">上传6秒到20秒的短视频</text>
+    <text class="video_num">每日上传数仅限3个</text>
+    <text class="video_desc">此视频进过审核后，将展示在广场和视频墙中。</text>
+    <text class="video_desc">通过置顶，可以让更多的人关注你哦~</text>
+  </view>
+  <video id="video" src="{{src}}" wx:else></video>
+  <view class="recruit_form">
+    <!-- <view class="recruit_input" wx:if="{{isSelectShow}}"> -->
+    <view class="recruit_input">
+      <text>标签</text>
+      <view class="recruit_select" bindtap='selectLabel'>
+        <!-- <block wx:if="{{true}}">
+          <text>请选择</text>
+          <text>></text>
+        </block> -->
+        <!-- <block else> -->
+          <text>{{tagNames}}</text>
+        <!-- </block> -->
+      </view>
+    </view>
+    <view class="recruit_input">
+      <text>视频描述</text>
+      <textarea bindinput="bindTextAreaBlur" value="{{videoDesc}}"></textarea>
+    </view>
+    <button class="recruit_btn" bindtap='uploadVideo'>提交</button>
+  </view>
+  
+</view>

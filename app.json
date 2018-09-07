@@ -1,0 +1,56 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/authorize/authorize",
+    
+    
+    "pages/recruit/recruit",
+    "pages/login/login",
+    "pages/chat/chat",
+    "pages/labelPage/labelPage",
+    "pages/chat_list/chat_list",
+    "pages/my_space/my_space",
+    "pages/vip_page/vip_page",
+    "pages/video/video",
+    "pages/withdraw/withdraw",
+    "pages/other_space/other_space",
+    "pages/recharge/recharge",
+    "components/sign-in/sign-in"
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#ffb320",
+    "selectedColor": "#ffb320",
+    "backgroundColor": "#000000",
+    "borderStyle": "white",
+    "list": [
+      {
+        "text": "发现",
+        "iconPath": "images/index_icon.png",
+        "selectedIconPath": "images/index_select_icon.png",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "招募",
+        "iconPath": "images/recruit_icon.png",
+        "selectedIconPath": "images/recruit_select_icon.png",
+        "pagePath": "pages/recruit/recruit"
+      },
+      {
+        "text": "私信",
+        "iconPath": "images/mailbox_icon.png",
+        "selectedIconPath": "images/mailbox_select_icon.png",
+        "pagePath": "pages/chat_list/chat_list"
+      },
+      {
+        "text": "我的",
+        "iconPath": "images/mine_icon.png",
+        "selectedIconPath": "images/mine_select_icon.png",
+        "pagePath": "pages/my_space/my_space"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+<!--pages/authorize/authorize.wxml-->
+<view class="authorize">
+  <image class='bg_img' src="/images/page_bg.png"></image>
+  <image class="auth_icon" src="/images/auth_icon.png"></image>
+  <view class="auth_word">
+    <text>为了更好地体验，</text>
+    <text>此应用需要获取您的昵称/头像等基本信息授权</text>
+  </view>
+  <button class="auth_btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">确认授权</button>
+</view>

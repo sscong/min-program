@@ -1,0 +1,77 @@
+/* pages/vip_page/vip_page.wxss */
+.vip_page{
+  font-size: 22rpx;
+  color: #fff;
+  padding-bottom: 66rpx;
+}
+.vip_contain{
+  margin-top: 145rpx;
+  overflow: hidden;
+  
+}
+.product_box{
+  width: 680rpx;
+  height: 250rpx;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10rpx;
+  margin: 38rpx auto 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.product_item{
+  width: 195rpx;
+  height: 195rpx;
+  
+  border-radius: 10rpx;
+  text-align: center;
+}
+.product_item.default{
+  border: 1px solid #595959;
+  color: #fff;
+}
+.product_item.selected{
+  border: 1px solid #ffb320;
+  color: #ffb320;
+}
+.product_item .month_list{
+  /* width: 88rpx;
+  height: 88rpx; */
+  margin-top: 26rpx;
+  margin-bottom: 25rpx;
+}
+.product_item .month_list text{
+  font-size: 64rpx;
+}
+.privilige_box{
+  width: 680rpx;
+  margin: 10rpx auto 0;
+}
+.privilige_item{
+  height: 140rpx;
+}
+.privilige_item:not(:last-child){
+  border-bottom: 1px solid #fff;
+}
+.privilige_item .icon{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin: 32rpx 24rpx 0 30rpx;
+  float: left;
+}
+.privilige_item .txt{
+  display: flex;
+  align-items: center;
+  height: 140rpx;
+  width: 445rpx;
+}
+.pay_btn{
+  width: 438rpx;
+  height: 72rpx;
+  border-radius: 34rpx;
+  background: #ffb320;
+  box-shadow: 0 5px 0 #f39442;
+  font-size: 26rpx;
+  margin-top: 22rpx;
+}

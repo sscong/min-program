@@ -1,0 +1,65 @@
+<!--pages/labelPage/labelPage.wxml-->
+<view class="label_page">
+  <image class='bg_img' src="/images/page_bg.png"></image>
+  <view class="selected_label">
+    <text class="label_tit">个人标签</text>
+    <view class="label_select">
+      <text wx:for="{{selectedTags}}" wx:key="{{index}}">{{item}}</text>
+    </view>
+  </view>
+  <view class="label_box">
+    <text class="label_tit">外形</text>
+    <view class="label_item">
+      <text wx:for="{{newChar}}" class="{{isSelect==true?'active':'none'}}" wx:key="{{index}}" bindtap='selectTag' data-name="{{item.name}}" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}</text>
+    </view>
+    <view class="box-border"></view>
+  </view>
+  <view class="label_box">
+    <text class="label_tit">兴趣爱好</text>
+    <view class="label_item">
+      <text wx:for="{{newInter}}" wx:key="{{index}}" bindtap='selectTag2' data-name="{{item.name}}" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}</text>
+    </view>
+    <view class="box-border"></view>
+  </view>
+  <view class="label_box">
+    <text class="label_tit">性格</text>
+    <view class="label_item">
+      <text wx:for="{{newShape}}" wx:key="{{index}}" bindtap='selectTag3' data-name="{{item.name}}" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}</text>
+    </view>
+    <view class="box-border"></view>
+  </view>
+  <button class="label_btn" bindtap='goRecruit'>提交</button>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+<!--pages/video/video.wxml-->
+<view class="video">
+  <video id="video" src="{{videoDetails.videoUrl}}" controls='false' autoplay='true' show-progress='false' show-play-btn='false' enable-progress-gesture='false' objectFit='fill' loop='true'>
+    <cover-view class="video_info">
+      <cover-view class="user_info">
+        <cover-image src="{{videoDetails.iconUrl}}"></cover-image>
+        <cover-view class="user_info_desc">
+          <cover-view class="info_desc">
+            <cover-view class="info_name">{{videoDetails.nickName}}</cover-view>
+            <cover-view class="info_state">在线</cover-view>
+          </cover-view>
+          <cover-view wx:if="{{isFollow == 0}}" bindtap='followUser' class="attention">关注</cover-view>
+          <cover-view wx:else class="attentioned" bindtap='cancelFollow'>已关注</cover-view>
+        </cover-view>
+      </cover-view>
+      <cover-view class="user_box">
+        <!-- <cover-image wx:for="{{videoDetails.imageUrls}}" wx:key="index"src="{{item}}"></cover-image> -->
+        <cover-image class="user_img_1" src="../../images/user_img_1.png"></cover-image>
+        <cover-image class="user_img_2" src="../../images/user_img_2.png"></cover-image>
+        <cover-image class="user_img_3" src="../../images/user_img_3.png"></cover-image>
+      </cover-view>
+    </cover-view>
+    <cover-view class="video_words">
+      <cover-view class="video_desc">
+        <cover-view class="video_desc_box">{{videoDetails.videoDesc}}</cover-view>
+        <!-- <cover-view class="video_desc_box">所爱隔山海山海不可平所爱隔山海山海不可平所爱隔山海山海不可平</cover-view> -->
+      </cover-view>
+      <cover-view class="video_label">
+        <cover-view wx:for="{{videoDetails.tags}}" wx:key="index">{{item}}</cover-view>
+      </cover-view>
+    </cover-view>
+    <cover-view class="video_option">
+      <cover-view class="heart_box">
+        <cover-image src="../../images/video_heart.png"></cover-image>
+        <cover-view class="option_text">{{videoDetails.funsCount}}</cover-view>
+      </cover-view>
+      <cover-view class="share_box">
+        <button class='share_btn' open-type="share"></button>
+        <cover-image src="../../images/video_share.png"></cover-image>
+        <cover-view class="option_text"></cover-view>
+      </cover-view>
+      <cover-image class="gift_box" src="../../images/video_gift.png"></cover-image>
+      <cover-view bindtap='toChat' class="chat_box">私信TA</cover-view>
+      <cover-image bindtap='closePage' class="close_box" src="../../images/video_close.png"></cover-image>
+    </cover-view>
+    <cover-view class="video_prompt" wx:if="{{isPromptShow}}">
+      <cover-view class="text_box">
+        <cover-view class="prompt_text">{{promptText1}}</cover-view>
+        <cover-view class="prompt_text">{{promptText2}}~</cover-view>
+      </cover-view>
+      <cover-view class="prompt_btn">
+        <!-- <cover-view bindtap='{{btnOption1 == '1'}} ? joinVip  : centerFunc'>{{promptBtn1}}</cover-view>
+        <cover-view bindtap='btnOption2 == '1' ? shareFunc : sendLetter'>{{promptBtn2}}</cover-view> -->
+        <cover-view wx:if="{{btnOption1 == '1'}}" bindtap='joinVip'>{{promptBtn1}}</cover-view>
+        <cover-view wx:else bindtap='centerFunc'>{{promptBtn1}}</cover-view>
+        <cover-view wx:if="{{btnOption2 == '1'}}" bindtap='shareFunc'>{{promptBtn2}}</cover-view>
+        <cover-view wx:else bindtap='sendLetter'>{{promptBtn2}}</cover-view>
+      </cover-view>
+    </cover-view>
+  </video>
+</view>

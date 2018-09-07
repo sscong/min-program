@@ -1,0 +1,67 @@
+/* pages/login/login.wxss */
+.login_box{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 30rpx;
+  color: #fff;
+}
+.avatar_box{
+  width: 190rpx;
+  
+  margin: 290rpx auto 0;
+  text-align: center;
+  
+}
+.avatar_default{
+  width: 190rpx;
+  height: 190rpx;
+  border-radius: 50%;
+  margin-bottom: 20rpx;
+}
+.birthday_box{
+  width: 364rpx;
+  margin: 85rpx auto 0;
+}
+.birthday_box .label{
+  float: left;
+  line-height: 64rpx;
+}
+.birthday_box .select_box{
+  float: right;
+}
+.select_box{
+  width: 278rpx;
+  height: 64rpx;
+  border-radius: 12rpx;
+  border: 1px solid #fff;
+  background: rgba(200, 200, 200, 0.3);
+  line-height: 64rpx;
+  position: relative;
+  overflow: hidden;
+}
+.select_box text{
+  margin-left: 32rpx;
+}
+.select_box .jiao{
+  width: 0;
+  height: 0;
+  border-width: 15rpx 15rpx 0;
+  border-style: solid;
+  border-color: #fff transparent transparent;
+  position: absolute;
+  top: 26rpx;
+  right: 16rpx;
+}
+.post_btn{
+  width: 438rpx;
+  height: 72rpx;
+  border-radius: 34rpx;
+  background: #ffb320;
+  box-shadow: 0 5px 0 #f39442;
+  font-size: 26rpx;
+  margin-top: 294rpx;
+  color: #463102;
+}

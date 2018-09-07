@@ -1,0 +1,62 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="nav">
+    <view class="nav_with">
+      <image src="../../images/with_img.png"></image>
+      <text class="with_num">26</text>
+      <text class="with_word">提现</text>
+    </view>
+    <view class="nav_sign">
+      <image src="../../images/sign_img.png"></image>
+      <text bindtap='showDialog'>签到有礼</text>
+    </view>
+  </view>
+  <view class="tab_tit">
+    <view class="tit {{tabArr.curHdIndex == '1' ? 'active' : ''}}" id="1" data-id="1" bindtap="changeTab">推荐</view>
+    <view class="tit {{tabArr.curHdIndex == '0' ? 'active' : ''}}" id="0" data-id="0" bindtap="changeTab">红人馆</view>
+    <view class="tit_line"></view>
+  </view>
+  <view class="tab_con">
+    <image class="forward" src="../../images/forward_img.png"></image>
+    <view class="video_page {{tabArr.curBdIndex == '1' ? 'active' : ''}}">
+      <view class="video_item" data-id="{{item.id}}" bindtap="goVideo" wx:for="{{mainDatas}}" wx:key="index">
+        <image class="video_item_img" src="{{item.videoImgUrl}}"></image>
+        <view class="info_item">
+          <image class="user_img" src="{{item.iconUrl}}"></image>
+          <view class="info_detail">
+            <view class="info_name">{{item.nickName}}</view>
+            <view class="info_other">
+              <view class="info_age">{{item.age}}岁</view>
+              <view class="info_heart">
+                <text class="heart_num">{{item.funsCount}}</text>
+                <image class="heart_img" src="../../images/heart.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="video_page {{tabArr.curBdIndex == '0' ? 'active' : ''}}">
+      <view class="video_item" data-id="{{item.id}}" bindtap="goVideo" wx:for="{{mainDatas}}" wx:key="index">
+        <image class="video_item_img" src="{{item.videoImgUrl}}"></image>
+        <view class="info_item">
+          <image class="user_img" src="{{item.iconUrl}}"></image>
+          <view class="info_detail">
+            <view class="info_name">{{item.nickName}}</view>
+            <view class="info_other">
+              <view class="info_age">{{item.age}}岁</view>
+              <view class="info_heart">
+                <text class="heart_num">{{item.funsCount}}</text>
+                <image class="heart_img" src="../../images/heart.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 新人好礼弹窗 -->
+  <new-gift id="newGift" bind:cancelEvent="_cancelEvent" bind:confirmEvent="_confirmEvent"></new-gift>
+  <sign-in id="signIn" sign-day="{{signDay}}"></sign-in>
+</view>

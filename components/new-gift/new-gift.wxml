@@ -1,0 +1,15 @@
+<!--components/new-gift/new-gift.wxml-->
+<view class='new_gift_layer' hidden='{{!isShow}}'>
+  <view class='container_box'>
+    <image class='new_gift_bg' src='/images/new_gift_bg.png'></image>
+    <image class='delete_btn' src='/images/delete.png' catchtap='_cancelEvent'></image>
+    <view class='gift_list'>
+      <text class='gift_item'>私信20条</text>
+      <text class='gift_item'>鲜花10朵</text>
+      <text class='gift_item'>关注信3条</text>
+      <text class='gift_item'>高级礼物大礼包</text>
+    </view>
+    <text class='gift_tip'>恭喜你获得新人豪礼！</text>
+    <button class='post_btn' catchtap='_confirmEvent'>点击领取</button>
+  </view>
+</view>

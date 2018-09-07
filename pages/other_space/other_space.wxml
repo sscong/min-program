@@ -1,0 +1,61 @@
+<!--pages/other_space/other_space.wxml-->
+<view class='other_space'>
+  <image class='bg_img' src="/images/page_bg.png"></image>
+  <view class='user_info_box'>
+    <view class='user_left'>
+      <image class='user_img' src="{{userInfo.iconUrl}}" mode="aspectFill"></image>
+      <text class='user_name'>{{userInfo.nickName}}</text>
+      <text class='user_id'>ID:{{userInfo.id}}</text>
+    </view>
+    <view class='user_right'>
+      <view class='follow_num'>
+        <text class='follow_other'><text class='num'>{{userInfo.followCount}}</text>关注</text>
+        <text class='follow_me'><text class='num'>{{fansCount}}</text>粉丝</text>
+      </view>
+      <view class='vip_box'>
+        <image class='vip_icon' src="{{userInfo.isVip?'has_vip.png':'/images/no_vip.png'}}" mode='widthFix'></image>
+        <text class='vip_txt' wx:if="{{userInfo.isVip}}">VIP</text>
+        <text class='follow_btn' wx:if="{{!isFollowed&&degree=='other'}}" catchtap='followUser'>关注</text>
+        <text class='follow_btn followed' wx:if="{{isFollowed&&degree=='other'}}" catchtap='cancelFollow'>已关注</text>
+      </view>
+      <view class='tip_box'>
+        <text class='sex_man' wx:if="{{userInfo.sex==1}}">♂</text>
+        <text class='sex_woman' wx:else>♀</text>
+        <text class='tip_item area'>{{userInfo.area.provinceName?userInfo.area.provinceName:userInfo.area.cityName}}</text>
+        <text class='tip_item age'>{{userInfo.age}}</text>
+        <text class='tip_item constellation'>{{userInfo.constellation}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class='nav_box'>
+    <text class="{{isOpus?'red':'default'}}" data-tabs="opus" bindtap='changeTab'>作品</text>
+    <text class="{{isOpus?'default':'red'}}" data-tabs="gift" bindtap='changeTab'>收到的礼物</text>
+  </view>
+
+  <view class='opus_box' wx:if="{{isOpus}}">
+    <view class='has_opus' wx:if="{{userInfo.mediaViews.length>0}}">
+      <block wx:for="{{userInfo.mediaViews}}" wx:key="{{index}}">
+        <view class='opus_item'>
+          <!-- <image class='opus_img' src="{{item.imageUrl}}" mode="aspectFill"></image> -->
+          <video class='opus_img' src='{{item.videoUrl}}' objectFit="fill" show-play-btn="false" controls="false"></video>
+        </view>
+      </block>
+    </view>
+    <view class='no_opus' wx:if="{{userInfo.mediaViews.length==0&&degree=='me'}}">
+      <text bindtap='goUploadVoide'>立即上传视频...</text>
+    </view>
+  </view>
+  <view class='gift_box' wx:else>
+    <view class='has_gift' wx:if="{{giftList}}">
+      <block wx:for="{{giftList}}" wx:key="{{index}}">
+        <view class='gift_item'>
+          <image class='gift_img' src="{{item.imgUrl}}" mode="widthFix"></image>
+        </view>
+      </block>
+    </view>
+    <view class='no_gift' wx:else>
+      <text>暂未收到礼物哦~</text>
+    </view>
+  </view>
+</view>

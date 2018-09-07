@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "top-title": "/components/top-title/top-title"
+  },
+  "navigationBarTitleText": "VIP特权"
+}

@@ -1,0 +1,5 @@
+<!--components/top-title/top-title.wxml-->
+<view class='top_title'>
+  <image class='back_img' src='/images/back_icon.png' bindtap='goBack' wx:if="{{showBack}}"></image>
+  <text>{{title}}</text>
+</view>

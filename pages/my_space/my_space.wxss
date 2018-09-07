@@ -1,0 +1,108 @@
+/* pages/my_space/my_space.wxss */
+.my_space{
+  width: 100%;
+  font-size: 26rpx;
+  color: #fff;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.user_info_box{
+  margin: 116rpx auto 0;
+  width: 635rpx;
+  height: 245rpx;
+}
+.user_left{
+  float: left;
+  width: 284rpx;
+}
+.user_left .user_img{
+  width: 104rpx;
+  height: 104rpx;
+  border-radius: 50%;
+  margin-left: 15rpx;
+}
+.user_left .user_name{
+  display: block;
+  line-height: 66rpx;
+}
+.user_left .user_id{
+  font-size: 16rpx;
+  color: #5ecdbc;
+}
+.user_right{
+  float: left;
+  margin-top: 103rpx; 
+}
+.follow_num{
+  font-size: 22rpx;
+  margin-bottom: 36rpx;
+}
+.follow_num .num{
+  color: #e95a3a;
+}
+.follow_num .follow_me{
+  margin-left: 105rpx; 
+}
+.tip_box .sex_man{
+  color: #2d79ba;
+  font-weight: 900;
+}
+.tip_box .sex_woman{
+  color: #ed7aa5;
+}
+.tip_box .tip_item{
+  border-radius: 5rpx;
+  padding: 4rpx 14rpx;
+  color: #fff;
+  margin-left: 20rpx;
+}
+.tip_box .area{
+  background: #f47f8f;
+  margin-left: 35rpx;
+}
+.tip_box .age{
+  background: #eab484;
+}
+.tip_box .constellation{
+  background: #5ecdbc;
+}
+.href_list .item{
+  
+  width: 722rpx;
+  margin: 0 auto;
+  border-bottom: 1px solid #595959;
+  overflow: hidden;
+  
+}
+.href_list .xiao_box{
+  width: 667rpx;
+  margin: 0 auto;
+  height: 97rpx;
+  line-height: 97rpx;
+}
+.href_list .icon{
+  width: 34rpx;
+  height: 35rpx;
+  margin-right: 27rpx;
+  float: left;
+  margin-top: 32rpx;
+  /* margin-top: 40rpx;
+  line-height: 35rpx; */
+}
+.href_list .right{
+  float: right;
+}
+.href_list .back{
+  width: 18rpx;
+  height: 32rpx;
+  margin-top: 30rpx;
+}
+.balance{
+  border-top: 1px solid #595959;
+}
+.balance .balance_num{
+  color: #ff1c1c;
+}
